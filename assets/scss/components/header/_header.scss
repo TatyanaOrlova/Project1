@@ -3,8 +3,6 @@
 
   display: grid;
   align-content: center;
-  // background-position: center;
-  // background-size: cover;
 
   min-height: 100vh;
   padding: 150px 0;
@@ -16,4 +14,6 @@
   color: $color-light;
   background-color: $color-primary;
   background-image: url(../img/img-header.png);
+  background-position: center;
+  background-size: cover;
 }
