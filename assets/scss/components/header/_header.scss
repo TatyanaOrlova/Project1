@@ -1,0 +1,19 @@
+.header {
+  position: relative;
+
+  display: grid;
+  align-content: center;
+  // background-position: center;
+  // background-size: cover;
+
+  min-height: 100vh;
+  padding: 150px 0;
+  // или другой вариант вместо grid
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  color: $color-light;
+  background-color: $color-primary;
+  background-image: url(../img/img-header.png);
+}
