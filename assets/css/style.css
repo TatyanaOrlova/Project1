@@ -200,6 +200,13 @@ a {
   color: #ffffff;
 }
 
+.header-content__container,
+.header-menu__container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,13 +237,20 @@ a {
   background-color: #d66926;
 }
 
-.header-content__container,
-.header-menu__container {
-  max-width: 1340px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+.hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
 }
+
 .header {
   position: relative;
 
