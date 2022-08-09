@@ -1,3 +1,6 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
 .header-navbar {
   // width: 100%;
   display: grid;
@@ -14,7 +17,7 @@
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     // display: flex;
     // justify-content: flex-end;
-    @include unlist;
+    @include unlist(0 -20px 0 0);
   }
 
   &__item {
@@ -27,7 +30,7 @@
     padding: $gap $gap-sm;
 
     transition: color 0.5s;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
 
     font-size: 18px;
 

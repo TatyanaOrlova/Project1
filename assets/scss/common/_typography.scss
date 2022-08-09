@@ -1,3 +1,5 @@
+@use "../presets" as *;
+
 * {
 
   ::before,
@@ -15,6 +17,7 @@ html {
 body {
   color: $color-primary;
   background-color: $color-light;
+  letter-spacing: 0.1em;
 }
 
 h1 {

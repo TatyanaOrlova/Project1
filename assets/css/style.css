@@ -166,13 +166,6 @@ template {
   display: none;
 }
 
-.header-menu__container,
-.header-content__container {
-  max-width: 1340px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
-}
 * ::before,
 * ::after {
   -webkit-box-sizing: border-box;
@@ -187,6 +180,8 @@ html {
 }
 
 body {
+  letter-spacing: 0.1em;
+
   color: #2d3651;
   background-color: #ffffff;
 }
@@ -235,6 +230,13 @@ a {
   background-color: #d66926;
 }
 
+.header-content__container,
+.header-menu__container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 .header {
   position: relative;
 
@@ -252,25 +254,13 @@ a {
   background-size: cover;
 }
 
-.header-content {
-  position: relative;
-  z-index: 1;
-  top: 0;
-}
-.header-content__title {
-  margin: 0 0 66px;
+.header-overlay {
+  position: absolute;
 
-  text-align: center;
-}
-.header-content__actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  opacity: 0.8;
+  background-color: #2d3651;
 
-  gap: 20px;
+  inset: 0;
 }
 
 .header-menu {
@@ -291,6 +281,20 @@ a {
   gap: 20px;
 }
 
+.header-logo {
+  letter-spacing: 0.22em;
+
+  font-size: 1.5rem;
+}
+.header-logo__accent {
+  display: inline-block;
+
+  margin-right: 7px;
+  padding: 14px 1px 13px 5px;
+
+  border: 3px solid #d53d27;
+}
+
 .header-navbar {
   display: grid;
   -webkit-box-flex: 1;
@@ -306,7 +310,7 @@ a {
   -ms-flex-pack: end;
   justify-content: end;
 
-  margin: 0;
+  margin: 0 -20px 0 0;
   padding: 0;
 
   list-style: none;
@@ -325,7 +329,7 @@ a {
   -webkit-transition: color 0.5s;
        -o-transition: color 0.5s;
           transition: color 0.5s;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
 
   font-size: 18px;
 }
@@ -334,25 +338,23 @@ a {
   color: #d66926;
 }
 
-.header-overlay {
-  position: absolute;
-
-  opacity: 0.8;
-  background-color: #2d3651;
-
-  inset: 0;
+.header-content {
+  position: relative;
+  z-index: 1;
+  top: 0;
 }
+.header-content__title {
+  margin: 0 0 53px;
 
-.header-logo {
-  letter-spacing: 0.25em;
-
-  font-style: 24px;
+  text-align: center;
 }
-.header-logo__accent {
-  display: inline-block;
+.header-content__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-  margin-right: 7px;
-  padding: 17px 5px 17px 5px;
-
-  border: 3px solid #d53d27;
+  gap: 20px;
 }
