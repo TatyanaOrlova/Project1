@@ -4,11 +4,16 @@
 $local-gap: calc(40px / 3);
 
 .skills {
-  padding: $gap-sm;
+  @include sm-min {
+    padding: $gap-sm;
+  }
+
+  @include sm {
+    padding: $gap;
+  }
 
   &__container {
     display: grid;
-    gap: $gap-sm;
 
     margin-bottom: 20px;
 
@@ -27,7 +32,13 @@ $local-gap: calc(40px / 3);
       grid-template-columns: repeat(2, 1fr);
     }
 
+    @include sm-min {
+      gap: $gap-sm;
+    }
+
     @include sm {
+      gap: $gap;
+
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
       grid-template-columns: 1fr;
     }
@@ -44,6 +55,9 @@ $local-gap: calc(40px / 3);
   &__actions {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+
+    @include sm-min {
+      margin-bottom: 30px;
+    }
   }
 }

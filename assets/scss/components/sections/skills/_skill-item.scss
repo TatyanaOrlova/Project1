@@ -9,7 +9,17 @@
   &__title {
     position: relative;
     z-index: 1;
+
     margin: 0;
+
+    @include md-min {
+      font-size: 1.25rem;
+    }
+
+    @include md {
+      font-size: 1.125rem;
+    }
+
     @include abs-position;
   }
 
@@ -23,8 +33,11 @@
   }
 
   &__image {
-    @include abs-position;
+    background-position: center;
+    background-size: cover;
     transition: transform 0.5s;
+
+    @include abs-position;
   }
 
   &__overlay {
