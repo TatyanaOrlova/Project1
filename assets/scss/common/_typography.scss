@@ -1,51 +1,32 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
-* {
-  ::before,
-  ::after {
-    box-sizing: border-box;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
-  overflow-y: scroll;
+  // overflow-y: scroll;
 
   font-family: $font-main;
-  font-size: $font-size;
+  font-size: 16px;
 }
 
 body {
-  letter-spacing: 0.1em;
+  // letter-spacing: 0.1em;
 
-  color: $color-primary;
+  color: $color-gray;
   background-color: $color-light;
-}
-
-@mixin lg-min {
-  @media (min-width: $lg) {
-    @content;
-  }
-}
-
-@mixin lg-md {
-  @media (max-width: calc($lg - 1px)) and (min-width: $md) {
-    @content;
-  }
-}
-
-@mixin md {
-  @media (max-width: calc($md - 1px)) {
-    @content;
-  }
 }
 
 h1 {
   letter-spacing: 0.08em;
 
   font-family: $font-header;
-  font-size: 3.75rem;
   font-weight: 300;
+  line-height: 1.2em;
 
   @include lg-min {
     font-size: 3.75rem;
@@ -56,6 +37,39 @@ h1 {
   @include md {
     font-size: 1.875rem;
   }
+}
+
+h2 {
+  letter-spacing: 0.1em;
+
+  color: $color-primary;
+
+  font-family: $font-header;
+  line-height: 1.2em;
+
+  @include lg-min {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  @include lg-md {
+    margin-bottom: 2.625rem;
+    font-size: 2rem;
+  }
+  @include md-sm {
+    margin-bottom: 2.25rem;
+    font-size: 1.5rem;
+  }
+  @include sm {
+    margin-bottom: 2.25rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+h3 {
+  letter-spacing: 0.05em;
+  color: $color-gray;
+  font-size: 1.125rem;
 }
 
 a {

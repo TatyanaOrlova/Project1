@@ -8,10 +8,12 @@
 
   padding: 0.5em 1em;
 
-  transition: background-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.1em;
 
-  border: 2px solid $color-light;
+  // border: 2px solid $color-light;
+  border-width: 2px;
+  border-style: solid;
 
   &:hover,
   &:focus {
@@ -19,6 +21,7 @@
   }
 
   &--light {
+    border-color: $color-light;
     background-color: rgba($color-light, 0.1);
 
     @include lg-min {
@@ -40,7 +43,8 @@
   &--primary {
     height: 60px;
 
-    border: 2px solid $color-primary;
+    // border: 2px solid $color-primary;
+    border-color: $color-primary;
     background-color: rgba($color-primary, 0.8);
 
     font-size: 1.125rem;
