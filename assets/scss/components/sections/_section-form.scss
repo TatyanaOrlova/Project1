@@ -1,16 +1,38 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
 .form {
-  &__title {
+  padding: $gap-lg 0;
+  background-color: $color-primary;
+
+  &__container {
+    display: grid;
+    gap: $gap;
+
+    @extend %container;
+
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
-}
-
-.hidden {
-}
-
-.form-container {
 }
 
 .form-item {
   &__input {
+    display: block;
+    width: 100%;
+    height: $gap-x3;
+    padding-right: $gap-lg;
+    padding-left: $gap-lg;
+
+    transition: background-color 0.5s, border-color 0.5s;
+    letter-spacing: 0.15em;
+
+    color: $color-light;
+    border: 2px solid rgba($color-light, 0);
+    border-bottom-color: rgba($color-light, 0.25);
+    background-color: rgba($color-light, 0.05);
+    font-size: 1.125rem;
   }
 }
 
