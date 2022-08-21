@@ -1,6 +1,5 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
-
 $local-gap: calc(40px / 3);
 
 .skills {
@@ -48,7 +47,6 @@ $local-gap: calc(40px / 3);
 
   &__actions {
     @extend %btn-container;
-
     @include sm-min {
       margin-bottom: $gap-lg;
     }

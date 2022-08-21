@@ -10,8 +10,8 @@
 
   transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.1em;
-
   // border: 2px solid $color-light;
+
   border-width: 2px;
   border-style: solid;
 
@@ -42,8 +42,8 @@
 
   &--primary {
     height: 60px;
-
     // border: 2px solid $color-primary;
+
     border-color: $color-primary;
     background-color: rgba($color-primary, 0.8);
 
